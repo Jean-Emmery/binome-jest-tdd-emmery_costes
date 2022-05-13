@@ -93,5 +93,17 @@ describe('Roman', () => {
         it('should return XC for 90', () => {
             expect(numberToRoman(90)).toBe('XC');
         });
+
+        it('should return C for 100', () => {
+            expect(numberToRoman(100)).toBe('C');
+        });
+
+        it('should return CI for 101', () => {
+            expect(numberToRoman(101)).toBe('CI');
+        });
+
+        it('should return CXCIX for 199', () => {
+            expect(numberToRoman(199)).toBe('CXCIX');
+        });
     });
 });
