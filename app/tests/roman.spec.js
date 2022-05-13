@@ -105,5 +105,13 @@ describe('Roman', () => {
         it('should return CXCIX for 199', () => {
             expect(numberToRoman(199)).toBe('CXCIX');
         });
+
+        it('should return D for 500', () => {
+            expect(numberToRoman(500)).toBe('D');
+        });
+
+        it('should return DI for 501', () => {
+            expect(numberToRoman(501)).toBe('DI');
+        });
     });
 });
