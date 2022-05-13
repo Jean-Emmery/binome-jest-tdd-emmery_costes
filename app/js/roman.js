@@ -1,5 +1,10 @@
 const ROMAN_CONFIG = [
     {
+        character: 'M',
+        value: 1000,
+        stepDownAmount: 100,
+    },
+    {
         character: 'D',
         value: 500,
         stepDownAmount: 100,

@@ -113,5 +113,17 @@ describe('Roman', () => {
         it('should return DI for 501', () => {
             expect(numberToRoman(501)).toBe('DI');
         });
+
+        it('should return CM for 900', () => {
+            expect(numberToRoman(900)).toBe('CM');
+        });
+
+        it('should return MCMLXXXII for 1982', () => {
+            expect(numberToRoman(1982)).toBe('MCMLXXXII');
+        });
+
+        it('should return MMM for 3000', () => {
+            expect(numberToRoman(3000)).toBe('MMM');
+        });
     });
 });
