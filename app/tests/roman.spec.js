@@ -13,5 +13,9 @@ describe('Roman', () => {
         it('should return III for 3', () => {
             expect(numberToRoman(3)).toBe('III');
         });
+
+        it('should return IV for 4', () => {
+            expect(numberToRoman(4)).toBe('IV');
+        });
     });
 });
