@@ -17,8 +17,17 @@ describe('Roman', () => {
         it('should return IV for 4', () => {
             expect(numberToRoman(4)).toBe('IV');
         });
+
         it('should return V for 5', () => {
             expect(numberToRoman(5)).toBe('V');
+        });
+
+        it('should return VI for 6', () => {
+            expect(numberToRoman(6)).toBe('VI');
+        });
+
+        it('should return VII for 7', () => {
+            expect(numberToRoman(7)).toBe('VII');
         });
     });
 });

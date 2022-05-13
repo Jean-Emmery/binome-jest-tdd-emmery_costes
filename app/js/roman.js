@@ -1,16 +1,18 @@
 export const numberToRoman = function (number) {
-  if (number === 4 || number === 5) {
-    let roman = '';
+  let roman = '';
+  if (number >= 4) {
     if ( number === 4 ) {
       roman += 'I';
     }
     roman += 'V';
-    return roman;
+
+    if ( number > 5 ) {
+      roman += numberToRoman(number - 5);
+    }
   } else  {
-    let roman = '';
     for (let i = 0; i < number; i++) {
       roman += 'I';
     }
-    return roman;
   }
-  }
+  return roman;
+}
