@@ -28,8 +28,10 @@ export function handleTresholdCase({number, config}) {
 }
 
 export const numberToRoman = function (number) {
-    if (number === 40 ){
-        return 'XL';
+    if (number >= 40 ){
+        let roman = 'XL';
+        roman += numberToRoman(number - 40);
+        return roman;
     }
     for (let i = 0; i < ROMAN_CONFIG.length; i++) {
         const config = ROMAN_CONFIG[i];
