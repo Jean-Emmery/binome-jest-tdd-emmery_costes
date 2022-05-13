@@ -1,7 +1,11 @@
 export const numberToRoman = function (number) {
   let roman = '';
-  if (number === 9) {
-    roman = 'IX';
+
+  if (number >= 9) {
+    if ( number === 9 ) {
+      roman += 'I';
+    }
+    roman += 'X';
   } else if (number >= 4) {
     if ( number === 4 ) {
       roman += 'I';
