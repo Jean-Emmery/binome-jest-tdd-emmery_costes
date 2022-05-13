@@ -29,5 +29,13 @@ describe('Roman', () => {
         it('should return VII for 7', () => {
             expect(numberToRoman(7)).toBe('VII');
         });
+
+        it('should return VIII for 8', () => {
+            expect(numberToRoman(8)).toBe('VIII');
+        });
+
+        it('should return IX for 9', () => {
+            expect(numberToRoman(9)).toBe('IX');
+        });
     });
 });
