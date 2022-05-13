@@ -125,5 +125,17 @@ describe('Roman', () => {
         it('should return MMM for 3000', () => {
             expect(numberToRoman(3000)).toBe('MMM');
         });
+
+        it('should return "" number = 0', () => {
+            expect(numberToRoman(0)).toBe('');
+        });
+
+        it('should return "" number = -1', () => {
+            expect(numberToRoman(-1)).toBe('');
+        });
+
+        it('should return "too large if number > 3999"', () => {
+            expect(numberToRoman(4000)).toBe('Number too high :4000');
+        });
     });
 });

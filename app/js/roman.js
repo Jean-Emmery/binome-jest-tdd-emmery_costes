@@ -54,7 +54,12 @@ function handleThresholdCase({number, config}) {
 }
 
 export function numberToRoman(number) {
-    for (let i = 0; i < ROMAN_CONFIG.length; i += 1) {
+    if (number <= 0) {
+        return '';
+    } else if (number > 3999) {
+        return 'Number too high :' + number;
+    }
+        for (let i = 0; i < ROMAN_CONFIG.length; i += 1) {
         const config = ROMAN_CONFIG[i];
         const {value, stepDownAmount} = config;
         if (number >= value - stepDownAmount) {
