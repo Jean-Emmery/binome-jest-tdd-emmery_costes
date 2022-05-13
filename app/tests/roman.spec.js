@@ -62,8 +62,8 @@ describe('Roman', () => {
             expect(numberToRoman(20)).toBe('XX');
         });
 
-        it('should return XX for 99', () => {
-            expect(numberToRoman(99)).toBe('X');
+        it('should return XX for 39', () => {
+            expect(numberToRoman(39)).toBe('XXXIX');
         });
     });
 });
