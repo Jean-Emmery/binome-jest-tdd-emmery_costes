@@ -54,36 +54,44 @@ describe('Roman', () => {
             expect(numberToRoman(13)).toBe('XIII');
         });
 
-        it('should return XIV for 15', () => {
+        it('should return XV for 15', () => {
             expect(numberToRoman(15)).toBe('XV');
         });
 
-        it('should return XV for 20', () => {
+        it('should return XX for 20', () => {
             expect(numberToRoman(20)).toBe('XX');
         });
 
-        it('should return XX for 39', () => {
+        it('should return XXXIX for 39', () => {
             expect(numberToRoman(39)).toBe('XXXIX');
         });
 
-        it('should return XXX for 40', () => {
+        it('should return XL for 40', () => {
             expect(numberToRoman(40)).toBe('XL');
         });
 
-        it('should return XL for 41', () => {
+        it('should return XLI for 41', () => {
             expect(numberToRoman(41)).toBe('XLI');
         });
 
-        it('should return XLI for 42', () => {
+        it('should return XLII for 42', () => {
             expect(numberToRoman(42)).toBe('XLII');
         });
 
-        it('should return XLII for 49', () => {
+        it('should return XLIX for 49', () => {
             expect(numberToRoman(49)).toBe('XLIX');
         });
 
-        it('should return XLIX for 50', () => {
+        it('should return L for 50', () => {
             expect(numberToRoman(50)).toBe('L');
+        });
+
+        it('should return LIX for 59', () => {
+            expect(numberToRoman(59)).toBe('LIX');
+        });
+
+        it('should return XC for 90', () => {
+            expect(numberToRoman(90)).toBe('XC');
         });
     });
 });
