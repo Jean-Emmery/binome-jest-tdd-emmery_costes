@@ -1,41 +1,42 @@
 const NUMERAL_ONE = 'I';
 
-const FIVE_CONFIG = {
-  treshold: 5,
-  character: 'V',
-}
-
-const TEN_CONFIG = {
-  treshold: 10,
-  character: 'X',
-}
+const ROMAN_CONFIG = [
+    {
+        treshold: 10,
+        character: 'X',
+    },
+    {
+        treshold: 5,
+        character: 'V',
+    }
+];
 
 export function handleTresholdCase({number, config}) {
-  const {treshold, character} = config;
-  let roman = '';
+    const {treshold, character} = config;
 
-  if ( number === treshold - 1 ) {
-    roman += NUMERAL_ONE;
-  }
-  roman += character;
+    let roman = '';
 
-  if ( number > treshold) {
-    roman += numberToRoman(number - treshold);
-  }
-  return roman;
+    if (number === treshold - 1) {
+        roman += NUMERAL_ONE;
+    }
+    roman += character;
+
+    if (number > treshold) {
+        roman += numberToRoman(number - treshold);
+    }
+    return roman;
 }
 
 export const numberToRoman = function (number) {
-  let roman = '';
-
-  if (number >= TEN_CONFIG.treshold - 1) {
-      roman += handleTresholdCase({number, config: TEN_CONFIG});
-  } else if (number >= FIVE_CONFIG.treshold - 1) {
-      roman += handleTresholdCase({number, config: FIVE_CONFIG});
-  } else  {
-    for (let i = 0; i < number; i++) {
-      roman += NUMERAL_ONE;
+    for (let i = 0; i < ROMAN_CONFIG.length; i++) {
+        const config = ROMAN_CONFIG[i];
+        if (number >= config.treshold - 1) {
+            return handleTresholdCase({number, config});
+        }
     }
-  }
-  return roman;
+    let roman = '';
+    for (let i = 0; i < number; i++) {
+        roman += NUMERAL_ONE;
+    }
+    return roman;
 }
