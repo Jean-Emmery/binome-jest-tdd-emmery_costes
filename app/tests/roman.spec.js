@@ -41,5 +41,25 @@ describe('Roman', () => {
         it('should return X for 10', () => {
             expect(numberToRoman(10)).toBe('X');
         });
+
+        it('should return XI for 11', () => {
+            expect(numberToRoman(11)).toBe('XI');
+        });
+
+        it('should return XII for 12', () => {
+            expect(numberToRoman(12)).toBe('XII');
+        });
+
+        it('should return XIII for 13', () => {
+            expect(numberToRoman(13)).toBe('XIII');
+        });
+
+        it('should return XIV for 15', () => {
+            expect(numberToRoman(15)).toBe('XV');
+        });
+
+        it('should return XV for 20', () => {
+            expect(numberToRoman(20)).toBe('XX');
+        });
     });
 });
